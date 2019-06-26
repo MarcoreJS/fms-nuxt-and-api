@@ -1,5 +1,5 @@
 <template>
-  <v-layout column justify-center align-center>
+  <v-layout row wrap>
     <v-flex sm12>
       <v-data-table :headers="headers" :items="friends">
         <template v-slot:items="props">
@@ -41,6 +41,7 @@ export default {
       };
     this.$axios.get("http://127.0.0.1/friends").then(res => {
       this.friends = res.data;
+      console.log(res.data)
     })
   }
 }

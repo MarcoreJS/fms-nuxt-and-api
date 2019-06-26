@@ -37,6 +37,7 @@ export default {
             }
             this.$axios.post("http://127.0.0.1/friends", new_friend,config.headers).then(res => {
                 alert("registro exitoso")
+                
             }).catch(e => alert(e.message))
         }
     }
